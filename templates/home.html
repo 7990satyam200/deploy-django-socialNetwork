@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="profile-header text-center" style="background-image: url(https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); ">
+  <div class="container-fluid">
+    <div class="container-inner">
+      <img class="rounded-circle media-object" src="https://bootstrap-themes.github.io/application/assets/img/avatar-dhg.png">
+      <h3 class="profile-header-user"> {{ user.username }}
+</h3>
+      <p class="profile-header-bio">I wish i was a little bit taller, wish i was a baller, wish i had a girl… also.</p>
+    </div>
+  </div>
+  <nav class="profile-header-nav">
+    <ul class="nav nav-tabs justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Photos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Others</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Anothers</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="jumbotron">
+  <h1 class="display-4">Social Messaging app</h1>
+  <p class="lead">A Twitter clone built with Django.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="{% url 'post_list' %}" role="button">View All Messages</a>
+  </p>
+</div>
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
+<div class="info">
+	<div class="icon icon-primary">
+		<i class="material-icons">chat</i>
+	</div>
+	<h4 class="info-title">Free Chat</h4>
+
+	<p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+</div>
+
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">
+      <span class="icon icon-chat"></span>
+      Discussions
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">
+      <span class="icon icon-bell"></span>
+      Notifications
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">
+      <span class="icon icon-users"></span>
+      Members
+    </a>
+  </li>
+</ul>
+
+{% endblock %}
